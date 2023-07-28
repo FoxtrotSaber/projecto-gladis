@@ -1,0 +1,82 @@
+<html>
+<head>
+
+<link rel="icon" type="png" href="images/icon.png" />
+
+<title>
+
+Hellstrike
+
+</title>
+
+
+<style>
+
+
+
+body {
+    background-color: #00000059;
+    color: white;
+	transition: 0.5s;
+	animation: transitionIn 0.75s;
+	margin: 0;
+	font-family: play;
+}
+
+
+video#bgvid { 
+    position: absolute;
+    z-index: -102;
+    margin-left: 0%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: none;
+    object-position: center;
+}
+
+
+.footer {
+    position: absolute;
+    background: #00000087;
+    width: 100%;
+    margin-top: 130px;
+	padding: 40px 0px;
+	text-align: center;
+	bottom: 0;
+}
+
+.footer a {
+    text-decoration: none;
+    position: relative;
+    color: white;
+    padding: 0px 60px;
+}
+
+
+
+@keyframes transitionIn {
+	from {
+		opacity: 0;
+		transform: rotateX(-10deg);
+	}
+	
+	to {
+		opacity: 1;
+		transform: rotateX(0);
+	}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<video playsinline autoplay muted loop id="bgvid">
+    <source src="gladis/gladis.webm" type="video/webm">
+</video>
+
+</body>
+
+</html>
