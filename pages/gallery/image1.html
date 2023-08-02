@@ -41,8 +41,10 @@ body {
     background: url(images/image1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-	transition: 0.3s;
-	animation: transitionIn 0.3s;
+    transition: 0.3s;
+    animation: transitionIn 0.3s;
+    outline: 7px solid #000000;
+    outline-offset: -7px;
 }
 
 .leftnextbutton {
@@ -82,16 +84,12 @@ body {
 
 <body>
 
-
 <meta http-equiv="refresh" content="5; url=image2.html">
 
 <div class="twinkling"></div>
 
 
 <div class="background"></div>
-
-
-
 
 
 <div class="leftnextbutton">
@@ -112,6 +110,18 @@ body {
   <a href="image5.html" target="gallery"><img src="base/fbuttons5.png"></a>
 </div>
 
+<script>
+
+$( 'html' ).on( 'click', '.bgbutton', function() {
+    $( '#dynamic-iframe' )[0].contentWindow.location.replace( $( this ).data( 'src' ) );
+});
+
+
+</script>
+
+
+
 </body>
+
 
 </html>
